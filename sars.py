@@ -1,8 +1,6 @@
 
 import sys
 import math
-#import midi
-#import mido
 from mido import Message, MidiFile, MidiTrack, MetaMessage, bpm2tempo
 
 this = "sars:  "
@@ -51,9 +49,6 @@ def gtoi(g):
 def genome2vector(string):
 
     # Cast lowercase alphabetical genome string into an integer vector
-
-    ## just for testing
-    #vec = [1, 4, 3, 2]
 
     # Interpret ACGT as numeric base-4
     base = 4
