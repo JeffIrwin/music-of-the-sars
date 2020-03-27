@@ -67,9 +67,10 @@ def genome2vector(string):
         #printf(i)
         #printf(str(gtoi(string[i])) + str(gtoi(string[i+1])))
 
-        # Note that the step size is hard-coded into this formula.  Ideally a
-        # dot product would be used.
-        vec[j] = gtoi(string[i]) * bvec[0] + gtoi(string[i+1]) * bvec[1]
+        # Dot product
+        vec[j] = 0
+        for k in range(0, step):
+            vec[j] += gtoi(string[i+k]) * bvec[k]
 
         j += 1
 
