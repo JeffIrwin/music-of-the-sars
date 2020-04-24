@@ -1,6 +1,8 @@
 
-import sys
+import argparse
 import math
+import os
+import sys
 from mido import Message, MidiFile, MidiTrack, MetaMessage, bpm2tempo
 
 this = "sars:  "
@@ -165,13 +167,20 @@ def genome2midi(infile, outfile):
 
     return io
 
+def sars_parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("genome", type = str,
+            help = "Input file of ASCII genome sequence")
+    return parser.parse_args()
+
+def replace_ext(f, ext):
+    base, oldext = os.path.splitext(f)
+    return base + ext
+
 def main():
     printf("From the top!")
-
-    infile = "sars-cov-2-genome.txt"
-    outfile = "sars-cov-2.mid"
-    io = genome2midi(infile, outfile)
-
+    args = sars_parse_args()
+    io = genome2midi(args.genome, replace_ext(args.genome, ".mid"))
     printf("Bravo!")
     return io
 
