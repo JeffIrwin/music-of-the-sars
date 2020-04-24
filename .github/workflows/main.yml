@@ -15,6 +15,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Clean, build, and test
       run: |
+        pip3 install mido
         git submodule update --init --recursive
         bash ./test.sh
 
