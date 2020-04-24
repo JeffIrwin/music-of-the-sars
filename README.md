@@ -1,3 +1,5 @@
+![](https://github.com/JeffIrwin/music-of-the-sars/workflows/CI/badge.svg)
+
 # music-of-the-sars
 Encoding the complete genome of the SARS-CoV-2 virus as a MIDI file
 
@@ -6,7 +8,7 @@ Encoding the complete genome of the SARS-CoV-2 virus as a MIDI file
 - `pip3 install mido`
 
 ## Run
-`python sars.py`
+`python sars.py sars-cov-2-genome.txt`
 
 ## Sample output
 See https://soundcloud.com/jirwin505/sars-cov-2-genome
