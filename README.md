@@ -7,6 +7,10 @@ Encoding the complete genome of the SARS-CoV-2 virus as a MIDI file
 - Python (3.8.1)
 - `pip3 install mido`
 
+## Download
+    git clone --recursive https://github.com/JeffIrwin/music-of-the-sars
+    cd music-of-the-sars
+    
 ## Run
 `python sars.py sars-cov-2-genome.txt`
 
